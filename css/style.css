@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: #666;
+  padding: 30px;
+}
+
+.box {
+  background-color: darkred;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #fff;
+  transition: transform 1s;
+}
+
+.box3:hover {
+  transform: rotate(30deg);
+}
+.box4:hover {
+  transform: translate(20px, -50px);
+}
+.box1:hover {
+  transform: skew(-50deg, 50deg);
+}
+.box2:hover {
+  transform: scale(2) rotate(360deg) translate(100px);
+}
+
+/* Css animation */
+@keyframes sliding {
+  0% {
+    background-color: red;
+    left: -8%;
+    top: -10%;
+  }
+  25% {
+    top: 78%;
+    background-color: rgb(255, 100, 0);
+  }
+  50% {
+    top: 0%;
+    background-color: rgb(255, 200, 0);
+  }
+  75% {
+    top: 78%;
+    background-color: rgb(221, 255, 0);
+  }
+  100% {
+    background-color: rgb(128, 255, 0);
+    left: 110%;
+    top: 0%;
+  }
+}
+.stage {
+  height: 300px;
+  width: 100%;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+.ball {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: relative;
+  background-color: yellow;
+  animation: sliding ease-in-out 3s infinite;
+}
